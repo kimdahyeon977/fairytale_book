@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.back {
+  z-index: -2;
+  position: fixed;
+}
+
+.common-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.middle-font {
+  color: #573d0e;
+  font-family: BM HANNA 11yrs old OTF;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.fixed-top-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36vh;
+  height: auto;
+  z-index: -1;
+}
+
+.fixed-bottom-left {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 36vh;
+  height: auto;
+  z-index: -1;
+}
+
+.fixed-bottom-right {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 36vh;
+  height: auto;
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  .fixed-top-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20vh;
+    height: auto;
+  }
+
+  .fixed-bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 20vh;
+    height: auto;
+  }
+
+  .fixed-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 20vh;
+    height: auto;
+  }
+}
