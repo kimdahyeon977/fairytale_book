@@ -58,6 +58,15 @@ code {
   height: auto;
   z-index: -1;
 }
+.middle-font-small {
+  color: #573d0e;
+  text-align: center;
+  font-family: NanumSquare;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 @media (max-width: 768px) {
   .fixed-top-left {
     position: fixed;
@@ -82,4 +91,245 @@ code {
     width: 20vh;
     height: auto;
   }
+}
+
+.box {
+  height: 264px;
+  width: 240px;
+  display: relative;
+  border-radius: 30px;
+}
+
+.box .popup-check {
+  height: 264px;
+  position: fixed;
+  width: 240px;
+}
+
+.box .overlap {
+  height: 264px;
+  position: relative;
+}
+
+.box .rectangle {
+  background-color: #ffffff;
+  border-radius: 14px;
+  height: 263px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 240px;
+}
+
+.box .element {
+  height: 74px;
+  left: 23px;
+  position: absolute;
+  top: 163px;
+  width: 198px;
+}
+
+.box .text-wrapper {
+  color: #04070c;
+  font-family: "NanumSquare-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  height: 18px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 194px;
+}
+
+.box .div {
+  color: #26282c;
+  font-family: "NanumSquare-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  height: 40px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 34px;
+  width: 194px;
+}
+
+.box .rectangle-2 {
+  background-color: #abc902;
+  border-radius: 14px 14px 0px 0px;
+  height: 132px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 240px;
+}
+
+.box .https-app {
+  height: 100px;
+  left: 71px;
+  object-fit: cover;
+  position: absolute;
+  top: 109px;
+  width: 100px;
+}
+
+.box .view {
+  background-image: url(https://generation-sessions.s3.amazonaws.com/ac5fb4c88857d0a962678fb56854c157/img/combined-shape.svg);
+  background-size: 100% 100%;
+  height: 102px;
+  left: 66px;
+  position: absolute;
+  top: 30px;
+  width: 120px;
+}
+
+.box .overlap-group {
+  height: 48px;
+  left: 7px;
+  position: relative;
+  top: 39px;
+  width: 113px;
+}
+
+.box .oval-copy {
+  background: linear-gradient(
+    180deg,
+    rgb(232.09, 117.02, 117.02) 0%,
+    rgba(204.53, 64.6, 64.6, 0) 100%
+  );
+  border-radius: 21.5px;
+  height: 43px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: 43px;
+}
+
+.box .oval-copy-2 {
+  background: linear-gradient(
+    180deg,
+    rgb(232.09, 117.02, 117.02) 0%,
+    rgba(204.53, 64.6, 64.6, 0) 100%
+  );
+  border-radius: 21.5px;
+  height: 43px;
+  left: 70px;
+  position: absolute;
+  top: 5px;
+  width: 43px;
+}
+
+.box .oval {
+  background-color: #ffffff;
+  border-radius: 9.5px;
+  height: 19px;
+  left: 34px;
+  position: absolute;
+  top: 0;
+  width: 19px;
+}
+
+.box .oval-copy-3 {
+  background-color: #ffffff;
+  border-radius: 9.5px;
+  height: 19px;
+  left: 60px;
+  position: absolute;
+  top: 0;
+  width: 19px;
+}
+
+.box .oval-2 {
+  background-color: #1b2334;
+  border-radius: 6px;
+  height: 12px;
+  left: 38px;
+  position: absolute;
+  top: 7px;
+  width: 12px;
+}
+
+.box .oval-copy-4 {
+  background-color: #1b2334;
+  border-radius: 6px;
+  height: 12px;
+  left: 64px;
+  position: absolute;
+  top: 7px;
+  width: 12px;
+}
+
+.box .path {
+  height: 9px;
+  left: 35px;
+  position: absolute;
+  top: 27px;
+  width: 47px;
+}
+
+.box .overlap-wrapper {
+  height: 76px;
+  left: 40px;
+  position: absolute;
+  top: 75px;
+  width: 90px;
+}
+
+.box .overlap-2 {
+  background-image: url(https://generation-sessions.s3.amazonaws.com/ac5fb4c88857d0a962678fb56854c157/img/polygon-1.svg);
+  background-size: 100% 100%;
+  height: 57px;
+  left: 6px;
+  position: relative;
+  width: 78px;
+}
+
+.box .overlap-group-2 {
+  height: 24px;
+  left: 31px;
+  position: absolute;
+  top: 32px;
+  width: 24px;
+}
+
+.box .oval-3 {
+  background-color: #ab781d;
+  border-radius: 6.97px/4.5px;
+  height: 9px;
+  left: 0;
+  position: absolute;
+  top: 12px;
+  transform: rotate(15deg);
+  width: 14px;
+}
+
+.box .oval-copy-5 {
+  background-color: #ffffff;
+  border-radius: 7.5px;
+  height: 15px;
+  left: 9px;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+.box .oval-copy-6 {
+  background-color: #1b2334;
+  border-radius: 4.9px;
+  height: 10px;
+  left: 11px;
+  position: absolute;
+  top: 4px;
+  width: 10px;
+}
+
+.box .img {
+  height: 8px;
+  left: 23px;
+  position: absolute;
+  top: 35px;
+  width: 14px;
 }

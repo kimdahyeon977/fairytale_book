@@ -1,0 +1,13 @@
+# Node modules
+fairy_book_front/node_modules/
+
+# Environment variables
+.env
+
+# Log files
+*.log 
+
+# Build directory
+fairy_book_front/build/
+
+fairy_book_front/package-lock.json
