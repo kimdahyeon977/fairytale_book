@@ -1,9 +1,11 @@
 from flask import Flask,render_template, request
 import config as config
+from flask.cors import CORS
 import openai
 import re
 
 app = Flask(__name__)
+CORS(app)
 app.config.from_object(config.config['development'])
 openai.api_key = app.config['OPENAI_KEY']
 
