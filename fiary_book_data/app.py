@@ -1,6 +1,6 @@
 from flask import Flask,render_template, request
-import config as config
-from flask.cors import CORS
+import fiary_book_data.config as config
+from flask_cors import CORS
 import openai
 import re
 
@@ -38,8 +38,9 @@ def gan(prompt):
 def text():
     if request.method=='POST':
         images=[]
-        name = request.form['sentence'] 
-        prompt = request.form['sentence'] 
+        data = request.get_json()
+        name = data.get('name')
+        prompt = data.get('sentence')
         if re.compile(r'[a-zA-Z]'):
             prompt = chatcompletion(prompt + '를 영어로 번역해줘')        
         res= gan(f'{name} is {prompt} in a fairy tale book')
