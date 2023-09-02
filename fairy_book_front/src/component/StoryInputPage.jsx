@@ -33,12 +33,14 @@ export default function StoryInputPage() {
   };
   const sendSentenceToServer = async (to) => {
     try {
-      const response = await fetch("http://localhost:8000/app", {
+      const response = await fetch("http://192.168.45.235:8000/app", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name: to.name, sentence: to.sentence }),
+        mode: "cors", // no-cors, *cors, same-origin
+        credentials: "same-origin",
+        body: JSON.stringify({ sentence: to.sentence }),
       });
 
       if (response.ok) {
