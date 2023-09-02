@@ -1,5 +1,5 @@
 from flask import Flask,render_template, request
-import config
+import config as config
 import openai
 import re
 
@@ -32,14 +32,15 @@ def gan(prompt):
     response = openai.Image.create(prompt = prompt, n=1, size='1024x1024')
     return response['data']
 
-@app.route('/text',methods=['GET','POST'])
+@app.route('/app',methods=['GET','POST'])
 def text():
     if request.method=='POST':
         images=[]
-        prompt = request.form['prompt']
+        name = request.form['sentence'] 
+        prompt = request.form['sentence'] 
         if re.compile(r'[a-zA-Z]'):
-            prompt = chatcompletion(prompt+'를 영어로 번역해줘')
-        res= gan(prompt+'in a fairy tale book')
+            prompt = chatcompletion(prompt + '를 영어로 번역해줘')        
+        res= gan(f'{name} is {prompt} in a fairy tale book')
         
         if len(res)>0:
             for img in res:
@@ -54,13 +55,20 @@ def audio():
         reg = re.compile(r'[a-zA-Z]')
         path = request.form['path']
         prompt = whisper(path)
-        if reg.match(prompt):
-            prompt = chatcompletion(prompt+'를 영어로 번역해줘')
-        res= gan(prompt+'in a fairy tale book')
-        
-        if len(res)>0:
-            for img in res:
-                images.append(img['url'])
+        cnt=0
+        total = ''
+        for i in prompt.split('.'):
+            cnt+=1
+            total += i
+            if cnt==2:
+                prompt = chatcompletion(total+'를 영어로 번역해줘') if reg.match(total) else total
+                res= gan(prompt+'in a fairy tale book')
+                if len(res)>0:
+                    for img in res:
+                        images.append(img['url'])
+                cnt=0
+                total = ''
+                continue
     return render_template('home.html', **locals()
                            )
 
