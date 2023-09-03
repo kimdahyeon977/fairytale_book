@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useRecoilState } from "recoil";
-import { nameAtom } from "../App";
+import { nameAtom, serverData } from "../App";
 import { Button, Dialog, TextField } from "@mui/material";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function StoryInputPage() {
   const [name, setName] = useRecoilState(nameAtom);
+  const [datajson, setDatajson] = useRecoilState(serverData);
   const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState(null);
   const [isText, setIsText] = useState(true);
@@ -33,20 +34,24 @@ export default function StoryInputPage() {
   };
   const sendSentenceToServer = async (to) => {
     try {
-      const response = await fetch("http://192.168.45.235:8000/app", {
+      console.log(to);
+      const response = await fetch("http://127.0.0.1:8000/app", {
         method: "POST",
+        // mode: "cors", // no-cors, *cors, same-origin
+
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "cors", // no-cors, *cors, same-origin
-        credentials: "same-origin",
-        body: JSON.stringify({ sentence: to.sentence }),
+        // credentials: "same-origin",
+        body: JSON.stringify({ sentence: to.sentence, name: to.name }),
       });
 
       if (response.ok) {
         const jsonResponse = await response.json();
         console.log(jsonResponse); // 서버로부터의 응답을 출력
+        setDatajson({ ...jsonResponse });
         handleClose();
+        navigate("/result");
       } else {
         console.log("Request failed!");
       }

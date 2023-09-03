@@ -11,12 +11,16 @@ import { RecoilRoot } from "recoil";
 import { atom } from "recoil";
 import { NamePage } from "./component/Namepage";
 import StoryInputPage from "./component/StoryInputPage";
+import Result from "./component/Result";
 
 export const nameAtom = atom({
   key: "name",
   default: "",
 });
-
+export const serverData = atom({
+  key: "data",
+  default: {},
+});
 function App() {
   const backgroundStyle = {
     backgroundImage: `url(${backgroundImage})`,
@@ -33,11 +37,14 @@ function App() {
   };
   const [showImage, setShowImage] = useState(true);
   const isSmallHeight = window.innerWidth < 600;
+  // useEffect(() => {
+  //   setShowImage(!showImage);
+  // }, []);
   return (
     <Router>
       <RecoilRoot>
         <div>
-          <button onClick={() => setShowImage(!showImage)}>Toggle Image</button>
+          {/* <button onClick={() => setShowImage(!showImage)}>Toggle Image</button> */}
 
           <div style={backgroundStyle} className="back"></div>
           <AnimatePresence>
@@ -97,7 +104,7 @@ function App() {
           <Routes>
             <Route path="/" element={<NamePage></NamePage>} />
             <Route path="/story" element={<StoryInputPage></StoryInputPage>} />
-            <Route path="/result" element={<div>users</div>} />
+            <Route path="/result" element={<Result></Result>} />
           </Routes>
         </div>
       </RecoilRoot>

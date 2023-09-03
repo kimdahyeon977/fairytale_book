@@ -1,11 +1,12 @@
 from flask import Flask,render_template, request
-import fiary_book_data.config as config
+import config
 from flask_cors import CORS
 import openai
 import re
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, supports_credentials=True)
+
 app.config.from_object(config.config['development'])
 openai.api_key = app.config['OPENAI_KEY']
 
@@ -38,18 +39,20 @@ def gan(prompt):
 def text():
     if request.method=='POST':
         images=[]
+        prompt_lst=[]
         data = request.get_json()
         name = data.get('name')
         prompt = data.get('sentence')
-        if re.compile(r'[a-zA-Z]'):
-            prompt = chatcompletion(prompt + '를 영어로 번역해줘')        
+        reg = re.compile(r'[a-zA-Z]')
+        # if reg.match(prompt):
+        #     prompt = chatcompletion(prompt + '를 영어로 번역해줘')        
         res= gan(f'{name} is {prompt} in a fairy tale book')
         
         if len(res)>0:
             for img in res:
                 images.append(img['url'])
-    return render_template('home.html', **locals()
-                           )
+        prompt_lst.append(prompt)
+    return {'images': images,'sentences': prompt_lst}
 
 @app.route('/audio',methods=['GET','POST'])
 def audio():

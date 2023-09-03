@@ -333,3 +333,174 @@ code {
   top: 35px;
   width: 14px;
 }
+.box-wether .element-weather {
+  height: 107px;
+  width: 216px;
+}
+
+.box-wether .element-title {
+  height: 33px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 54px;
+}
+
+.box-wether .group {
+  height: 33px;
+}
+
+.box-wether .title {
+  height: 33px;
+  position: relative;
+  width: 56px;
+}
+
+.box-wether .text-wrapper {
+  color: #573d0e;
+  font-family: "BM HANNA 11yrs old OTF-Regular", Helvetica;
+  font-size: 32px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+}
+
+.box-wether .icon {
+  height: 62px;
+  left: 0;
+  position: absolute;
+  top: 45px;
+  width: 42px;
+}
+
+.box-wether .div-wrapper {
+  height: 16px;
+  left: 5px;
+  position: absolute;
+  top: 46px;
+  width: 30px;
+}
+
+.box-wether .div {
+  color: #404040;
+  font-family: "BM HANNA 11yrs old OTF-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+}
+
+.box-wether .icon-2 {
+  background-size: 100% 100%;
+  height: 42px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 42px;
+}
+
+.box-wether .icon-3 {
+  height: 62px;
+  left: 58px;
+  position: absolute;
+  top: 45px;
+  width: 42px;
+}
+
+.box-wether .icon-cloudy-wrapper {
+  background-color: #ffffff;
+  border: 2px solid;
+  border-color: #222222;
+  border-radius: 40px;
+  box-shadow: 2px 4px 8px -11.63px #15334f1a;
+  height: 42px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 42px;
+}
+
+.box-wether .icon-cloudy {
+  height: 30px;
+  left: 4px;
+  position: absolute;
+  top: 4px;
+  width: 30px;
+}
+
+.box-wether .icon-4 {
+  height: 62px;
+  left: 116px;
+  position: absolute;
+  top: 45px;
+  width: 42px;
+}
+
+.box-wether .title-2 {
+  height: 16px;
+  left: 13px;
+  position: absolute;
+  top: 46px;
+  width: 15px;
+}
+
+.box-wether .img-wrapper {
+  background-color: #ffffff;
+  border-radius: 40px;
+  box-shadow: 2px 4px 8px -11.63px #15334f1a;
+  height: 42px;
+  position: absolute;
+  width: 42px;
+}
+
+.box-wether .img {
+  height: 30px;
+  left: 6px;
+  position: absolute;
+  top: 6px;
+  width: 30px;
+}
+
+.box-wether .icon-5 {
+  height: 62px;
+  left: 174px;
+  position: absolute;
+  top: 45px;
+  width: 42px;
+}
+
+.box-wether .title-3 {
+  height: 16px;
+  left: 12px;
+  position: absolute;
+  top: 46px;
+  width: 15px;
+}
+.box-wether {
+  position: relative;
+}
+.label {
+  height: 33px;
+  width: 81px;
+}
+
+.label .text-wrapper {
+  color: #573d0e;
+  font-family: "BM HANNA 11yrs old OTF-Regular", Helvetica;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+}
